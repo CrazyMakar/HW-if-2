@@ -40,25 +40,29 @@ public class Main {
 
         System.out.println("Задание №4");
         {
-            int deliveryDistance = 90;
+            int deliveryDistance = 80;
             int days = 1;
-            if (deliveryDistance > 100) {
-                System.out.println("Доставки нет!");
-            } else {
-                if (deliveryDistance > 20) {
-                    days++;
-                }
-                if (deliveryDistance > 60) {
-                    days++;
-                }
+            int distance0 = 0;
+            int distance1 = 20;
+            int distance2 = 60;
+            int distance3 = 100;
+            if (deliveryDistance > distance0 && deliveryDistance <= distance1) {
                 System.out.println("Потребуется дней: " + days + " срок доставки");
+            } else if (deliveryDistance > distance1 && deliveryDistance <= distance2) {
+                days++;
+                System.out.println("Потребуется дней: " + days + " срок доставки");
+            } else if (deliveryDistance > distance2 && deliveryDistance <= distance3) {
+                days = days + 2;
+                System.out.println("Потребуется дней: " + days + " срок доставки");
+            } else if (deliveryDistance > distance3) {
+                System.out.println("Доставки нет!");
             }
         }
         System.out.println();
 
         System.out.println("Задание №5");
         {
-            int monthNumber = 91;
+            int monthNumber = 12;
             switch (monthNumber) {
                 case 1, 2, 12:
                     System.out.println("Зима");
